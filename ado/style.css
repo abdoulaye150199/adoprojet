@@ -1,0 +1,870 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #F0F9F4;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Logo à gauche, menu centré, boutons à droite */
+    align-items: center;
+    padding: 20px 50px;
+    z-index: 2; /* Always stays above the background */
+}
+
+.logo {
+    position: relative;
+    left: 0; /* Ajuste la position de la logo à gauche */
+}
+nav {
+    display: flex;
+    align-items: center;  /* Vertically center items */
+    justify-content: center;  /* Horizontally center the menu */
+    flex-grow: 1;  /* Allow the nav to take up remaining space if part of a larger layout */
+    height: 100%; /* Make sure it fills the container vertically if needed */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center; /* Center the items inside the nav */
+    align-items: center; /* Center the text vertically */
+}
+
+nav ul li {
+    margin: 0 15px; /* Horizontal spacing between menu items */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    text-align: center; /* Ensure text is centered inside links */
+}
+
+
+/* Boutons Connexion et Inscription */
+.auth-buttons {
+    display: flex;
+    margin-left: 20px; /* Sépare le menu des boutons */
+}
+
+.auth-buttons a {
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-left: 10px; /* Espace entre les deux boutons */
+}
+
+.connexion {
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.connexion:hover {
+    background-color: #ffffff;
+    color: #356F37;
+    transform: translateY(-5px);
+}
+
+.inscription {
+    background-color: #fff;
+    color: #356F37;
+    font-size: 1rem;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+.inscription:hover {
+    background-color: #356F37;
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+
+/* Hero Section with background image */
+.hero {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 110vh; /* Full screen height */
+    background-image: url('img/background.png'); /* Image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 10px 30px;
+}
+
+.hero-content {
+    max-width: 500px;
+    z-index: 1; /* Make sure content appears above the background */
+}
+
+.hero-content h1 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: #e7e7e7;
+}
+.hero-content span{
+    color: #fff;
+    font-weight:bolder;
+}
+.hero-image img {
+    width: 755px; /* Adjust image size */
+    border-radius: 10px;
+    margin-top: 130px; /* Push the image down */
+    margin-left: 10px; /* Adjust the value as needed to move right */
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: #ffffff;
+    color: #254D25;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #356F37; /* Changement de couleur du fond au survol */
+    color: #fff; /* Texte en blanc au survol */
+   
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+/* Services grid */
+.services-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.service-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 350px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.services-section p {
+    color: #000; /* Définit la couleur du texte en noir */
+}
+
+.service-card:hover {
+    background: linear-gradient(135deg, #356F37, #000000); /* Fond vert au survol */
+    color: #ffffff; /* Texte blanc au survol */
+    transform: translateY(-5px); /* Légère élévation au survol */
+}
+
+/* Assure-toi que tous les éléments texte à l'intérieur de .service-card deviennent blancs */
+.service-card:hover h2,
+.service-card:hover h3,
+.service-card:hover p,
+.service-card:hover span {
+    color: #ffffff; /* Texte blanc pour tous les éléments de texte */
+}
+
+.service-icon img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #254D25; /* Darker green */
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+
+/* Property section styling */
+.property-section {
+    position: relative;
+    background-image: url('img/background\ 2.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.property-container {
+    color: #fff;
+    /* background-color: rgba(0, 0, 0, 0.5); Add a slight dark overlay */
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.property-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.property-container p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: space-between; /* Reduce space between buttons */
+    background-color: rgba(255, 255, 255, 0.701);
+    padding: 5px;
+    border-radius: 10px 0px 0;
+    width: 50%; /* Adjust the width */
+    margin-left: 37px; /* Align the search bar to the left */
+    transform: translateX(-10%); /* Optional: Fine-tune the left shift */
+    gap: 5px; /* Control space between buttons */
+    margin-bottom: 0px; /* Add space for the next section */
+}
+
+.search-bar-lower {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Align content evenly */
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 0 10px;
+    width: 100%; /* Larger width for the lower search bar */
+    margin: 0 auto; /* Center the lower search bar */
+    gap: 10px; /* Adjust spacing between elements */
+}
+
+
+.search-button {
+    padding: 5px 10px;
+    border: none;
+    background-color: transparent; /* Set transparent to retain full hover effect */
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    color: #333; /* Text color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px; /* Optional: to ensure buttons have a minimum size */
+}
+
+.search-button:hover,
+.search-button.active { /* Apply styles for hover and active (selected) */
+    color: #fff; /* Change text color on hover and when active */
+    background-color: #004019; /* Full background fill on hover */
+}
+
+.search-button::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%; /* Make the vertical line fit the button height */
+    width: 1px;
+    background-color: #ddd; /* Vertical line color */
+}
+
+.search-button:last-child::after {
+    display: none; /* Remove the vertical line for the last button */
+}
+
+/* Remove margin between buttons to make sure dividers are aligned correctly */
+.search-bar .search-button {
+    margin: 0;
+}
+
+/* Keep the hover effect on the selected button */
+.search-button.active {
+    background-color: #00572d; /* Different background to indicate active */
+    color: #fff; /* Keep text white when active */
+}
+.search-button {
+    padding: 5px 10px;
+    border: none;
+    background-color: transparent; /* Set transparent to retain full hover effect */
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    color: #333; /* Text color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px; /* Optional: to ensure buttons have a minimum size */
+}
+
+.search-button:hover,
+.search-button.active { /* Apply styles for hover and active (selected) */
+    color: #005c08; /* Change text color on hover and when active */
+    background-color: #ffffffe0; /* Full background fill on hover */
+}
+
+.search-button::after {
+    /* content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0; */
+    height: 100%; /* Make the vertical line fit the button height */
+    width: 1px;
+    background-color: #ddd; /* Vertical line color */
+}
+
+.search-button:last-child::after {
+    display: none; /* Remove the vertical line for the last button */
+}
+
+/* Remove margin between buttons to make sure dividers are aligned correctly */
+.search-bar .search-button {
+    margin: 0;
+}
+
+/* Keep the hover effect on the selected button */
+.search-button.active {
+    background-color: #f5f5f5; /* Different background to indicate active */
+    color: #075100; /* Keep text white when active */
+    padding: 5px 10px;
+    min-width: 100px;
+}
+
+/* Dropdown styling */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    padding: 10px 20px;
+    border: none;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-toggle i {
+    margin-right: 8px; /* Space between the icon and text */
+}
+
+.dropdown-toggle:hover {
+    background-color: #ddd;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    min-width: 150px;
+    z-index: 1;
+}
+
+.dropdown-menu li {
+    list-style: none;
+    text-align: left;
+}
+
+.dropdown-menu li a {
+    color: #333;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f4f4f4;
+}
+
+/* Show the dropdown menu when hovering over the dropdown */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.search-text {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    color: #00572d;
+}
+
+.search-view-button {
+    padding: 10px 20px;
+    background-color: #ff8c42;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-view-button:hover {
+    background-color: #ff701e;
+}
+
+.property-list-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 20px;
+    justify-items: center;
+}
+
+.property-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    max-width: 350px;
+    width: 90%;
+}
+
+.property-card:hover {
+    background: linear-gradient(135deg, #356F37, #000000); /* Fond vert au survol */
+    color: #ffffff; /* Texte blanc au survol */
+    transform: translateY(-5px); /* Légère élévation au survol */
+}
+/* Assure-toi que tous les éléments texte à l'intérieur de .service-card deviennent blancs */
+.property-card:hover h2,
+.property-card:hover h3,
+.property-card:hover p,
+.property-card:hover span {
+    color: #ffffff; /* Texte blanc pour tous les éléments de texte */
+}
+.property-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.property-info {
+    padding: 10px;
+    text-align: left;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2E7D32;
+}
+
+.location {
+    font-size: 1rem;
+    color: #333;
+}
+
+.status {
+    font-size: 1rem;
+    margin-top: 0px;
+}
+
+.status.rent {
+    color: #E53935;
+}
+
+.status.sale {
+    color: #E53935;
+}
+
+.view-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #F78C40;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.view-link:hover {
+    background-color: #E57830;
+}
+
+.property-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.property-details span {
+    display: flex;
+    align-items: center; /* Alignement vertical des icônes et du texte */
+    gap: 8px; /* Espacement entre l'icône et le texte */
+}
+
+.property-details img {
+    width: 18px; /* Taille des icônes */
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    filter: brightness(0.4); /* Légère ombre pour correspondre au texte */
+}
+
+.property-details span:first-child img {
+    filter: brightness(0.8); /* Brillance plus forte pour la première icône */
+}
+
+.property-details span:last-child img {
+    filter: brightness(0.8); /* Brillance plus forte pour la dernière icône */
+}
+
+/* Optionnel: Survol des icônes */
+.property-details span:hover img {
+    filter: brightness(1); /* Les icônes deviennent plus claires au survol */
+}
+
+
+/* Voir plus section */
+.see-more {
+    margin-top: 40px;
+}
+.voir-button {
+    background-color: none; /* Button background color */
+    color: rgb(255, 140, 0); /* Text color */
+    padding: 10px 15px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* No underline */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s ease; /* Smooth background color change on hover */
+    margin-left: 140px;
+}
+
+.voir-button:hover {
+    background-color: #E57830; /* Darker shade on hover */
+    color: #ffffff; /* White text color on hover */
+}
+.see-more a {
+    color: #2E7D32;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.see-more a:hover {
+    text-decoration: underline;
+}
+
+#appart {
+  padding: 20px;
+  text-align: center;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: space-between; /* Space between the text and button */
+    align-items: center; /* Align them vertically in the middle */
+    margin-bottom: 10px;
+  }
+  
+  .carousel-container h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0%; /* Remove margin to align vertically */
+    margin-left: 150px;
+    transform: translateY(-1px);
+  }
+  
+  .btn-more {
+    background-color: #ff7a2d;
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: 750px; /* Pousse la navigation vers la droite */
+    transform: translateY(-45px);
+  }
+  
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-item {
+  min-width: 33.333%;
+  box-sizing: border-box;
+  padding: 10px;
+  position: relative;
+  text-align: left;
+}
+
+.carousel-item img {
+  width: 100%;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.carousel-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.carousel-info h3, .carousel-info p, .btn-visualiser {
+  margin: 10px 0;
+}
+
+.btn-visualiser {
+  background-color: #ff7a2d;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.carousel-item:hover .carousel-info {
+  opacity: 1;
+}
+
+.carousel-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Boutons "Précédent" et "Suivant" */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ff7a2d;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  z-index: 10; /* Assure que les boutons sont au-dessus des images */
+}
+
+.prev {
+  left: -30px;
+}
+
+.next {
+  right: -30px;
+}
+
+
+
+  
+  .contact-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background-image: url('img/background\ 3.png'); /* Remplace 'background.png' par le chemin de ton image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+}
+
+.contact-info {
+    width: 40%;
+}
+
+.contact-info h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #fff;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    margin-right: 15px;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+}
+
+.contact-form {
+    width: 40%;
+    height: 60%;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: none;
+}
+
+.contact-form h2 {
+    color: #ff6a00;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center; /* Ajout pour centrer le texte */
+}
+
+
+.contact-form input, .contact-form textarea {
+    background: #ddd;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 15px;
+    background-color: #ff6a00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form button:hover {
+    background-color: #e65c00;
+}
+
+
+footer {
+    background-color: #000;
+    padding: 40px 0;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .logo img {
+    width: 100px;
+  }
+  
+  .footer-nav {
+    margin-left: 650px; /* Pousse la navigation vers la droite */
+  }
+  
+  .footer-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .footer-rights {
+    font-size: 8px;
+    opacity: 0.8;
+    margin-top: 40px;
+    text-align: center;
+  }
+  
